@@ -113,7 +113,7 @@ internal class FeatureJsonAdapterSpec : Spek({
             }
             it("Throws a specific error message") {
                 val errorMessage =
-                    present(containsSubstring("java.lang.NullPointerException: Feature was null!"))
+                    present(containsSubstring("Feature was null!"))
                 assert.that({ adapter.toJson(feature) }, throws(has(Exception::message, errorMessage)))
             }
         }
